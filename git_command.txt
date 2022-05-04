@@ -7,7 +7,7 @@
 6. git checkout 5813bb5(commit id's first 7 digit)
 7. git checkout -: restore latest
 8. git remote add orgin https://github.com/gigoc/~
-9. git push origin mster or git push origin +master
+9. git push origin master or git push origin +master
 10. git clone https://github.com/gigoc/~ .
 11. git pull origin master
 12. git config --list
