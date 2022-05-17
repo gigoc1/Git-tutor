@@ -13,3 +13,5 @@
 12. git config --list
     - show current settings
 13. git remote set-url origin <new giturl>
+14: git pull 명령시에 untracked working tree files overwritten 나올때:
+    git clean -d -f -f
