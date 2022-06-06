@@ -15,3 +15,7 @@
 13. git remote set-url origin <new giturl>
 14: git pull 명령시에 untracked working tree files overwritten 나올때:
     git clean -d -f -f
+15. gitignoer 파일 추가시 로컬저장소의 index 삭제
+    - git rm -r --cached .
+    - 이후에 (git add ., git commit, git push 수행)
+    - 출처: https://dev-jwblog.tistory.com/51
