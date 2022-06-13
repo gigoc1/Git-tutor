@@ -19,3 +19,7 @@
     - git rm -r --cached .
     - 이후에 (git add ., git commit, git push 수행)
     - 출처: https://dev-jwblog.tistory.com/51
+16. git pull 에러 해결(Your local changes to the following files would be overwritten by merge)
+   - 방법1 (git stash -> git pull origin master -> git stash pop, or git stash && git pull origin master && git stash pop)
+   - 방법2 (git add를 하고 git pull 수행)
+   - 출처: https://goddaehee.tistory.com/253
