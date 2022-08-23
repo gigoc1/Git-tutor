@@ -23,3 +23,10 @@
    - 방법1 (git stash -> git pull origin master -> git stash pop, or git stash && git pull origin master && git stash pop)
    - 방법2 (git add를 하고 git pull 수행)
    - 출처: https://goddaehee.tistory.com/253
+17. 작업 트리에서 수정한 파일 되돌리기 명령어
+   - git restore test.txt
+18. 스테이징 되돌리기 명령어(git add 통해 스테이지에 올라간 것을 다시 내린다는 뜻)
+   - git restore --staged test.txt
+19. Filename too long error 발생 시 해결법: 윈도우의 path 길이제한을 변경
+   - git config --global(or system) core.longpaths true
+   - 위 명령어를 통해 260 --> 4096 까지 길이 증가
