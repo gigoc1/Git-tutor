@@ -30,3 +30,22 @@
 19. Filename too long error 발생 시 해결법: 윈도우의 path 길이제한을 변경
    - git config --global(or system) core.longpaths true
    - 위 명령어를 통해 260 --> 4096 까지 길이 증가
+20. Github에서 기본 branch 변경 후 처리법
+  1) reference: https://blog.outsider.ne.kr/1598
+  2) 처리 순서
+     - git branch -m master main
+     - git fetch origin
+     - git branch -u origin/main main
+     - git remote set-head origin -a
+  3) 위 처리와 관련된 명령어 및 설명
+    - git branch -a : local과 remote의 branch 이름 표시
+    - git branch -m master main : -m은 move의 약자로 로컬 브랜치 이름을 master에서 main으로 변경하겠다는 의미
+    - git fetch origin : 리모트의 브랜치가 변경되었으므로 로컬로 이러한 정보를 가져오는 것
+                         git pull은 "git fetch + git merge"의 의미
+    - git branch -u origin/main main : 로컬의 main브랜치가 원격의 main 브랜치를 추적하도록 설정하는 것
+      이와 관련하여 "git branch -vv"를 실행하면 (로컬/원격)브랜치의 현 상태 확인 가능
+    - git remote set-head origin -a : 잘 모르겠음 reference 읽어 볼 것
+21. "fatal: refusing to merge unrelated histories" 해결법
+  1) reference: https://somjang.tistory.com/entry/Git-fatal-refusing-to-merge-unrelated-histories-해결-방법
+  2) 서로 관련 기록이 없는 두 프로젝트를 병합할 때 git이 거부하는 것
+  3) 해결법: git pull origin master --allow-unrelated-histories
