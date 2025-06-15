@@ -49,3 +49,6 @@
   1) reference: https://somjang.tistory.com/entry/Git-fatal-refusing-to-merge-unrelated-histories-해결-방법
   2) 서로 관련 기록이 없는 두 프로젝트를 병합할 때 git이 거부하는 것
   3) 해결법: git pull origin master --allow-unrelated-histories
+22. 로컬을 원격의 데이터로 동일하게 하는법(다음 순서대로 실행)
+  1) git fetch origin: 로컬에 저장된 origin의 정보를 최신의 것으로 가져오는 것
+  2) git reset --hard origin/master: 로컬을 로컬의 origin/master로 강제로 가져오는 것
