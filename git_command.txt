@@ -52,3 +52,15 @@
 22. 로컬을 원격의 데이터로 동일하게 하는법(다음 순서대로 실행)
   1) git fetch origin: 로컬에 저장된 origin의 정보를 최신의 것으로 가져오는 것
   2) git reset --hard origin/master: 로컬을 로컬의 origin/master로 강제로 가져오는 것
+23. 오픈소스(original source, ex) BACnet stack)를 따라 나의 remote repo를 업데이트 하는 법
+  1) git remote add upstream https://github.com/bacnet-stack/bacnet-stack.git
+     --> upstream이라는 주소정보를 local(.git 폴더)에 한줄 적어 놓는 행위
+  2) git fetch upstream
+     --> upstram의 최신정보를 가져오는 것
+  3) git merge upstream/master(or main)
+     --> 이제 로컬의 데이터를 upstream 내용으로 merge
+     --> vscode에서 충돌 처리, 'merge changes'는 add 하기전의 충돌 내용, 'added changes'는 git이 알아서 충돌을 해결하고 'add'한 결과
+  4) git commit -m "commit to upstream"
+     --> upstream 내용으로 commit
+  5) git push origin master
+     --> remote repo를 업데이트
