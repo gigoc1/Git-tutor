@@ -65,3 +65,10 @@
      --> upstream 내용으로 commit
   5) git push origin master
      --> remote repo를 업데이트
+24. 내 repo와 upstream의 파일이 다른것을 확인
+  1) upstream과 다른파일 목록만 볼때
+    --> git diff --stat upstream/master
+  2) 특정 파일이 다른지 확인
+    --> git diff upstream/master -- src/bacnet/datalink/bvlc-sc.c
+  3) 내 commit이 upstream과 어디서 어떻게 갈라졌는지 확인
+    --> git log upstream/master..HEAD --oneline --stat
