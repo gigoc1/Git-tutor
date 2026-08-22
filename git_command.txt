@@ -72,3 +72,9 @@
     --> git diff upstream/master -- src/bacnet/datalink/bvlc-sc.c
   3) 내 commit이 upstream과 어디서 어떻게 갈라졌는지 확인
     --> git log upstream/master..HEAD --oneline --stat
+  4) vscode에서 다른 부분을 시각적으로 확인하는 법
+    -->먼저 설정할 것
+       - git config --global diff.tool vscode
+       - git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE"
+    --> git difftool upstream/master -- src/bacnet/datalink/bsc/bvlc-sc.c
+    --> "git difftool upstream/master"하면 여러 파일이 나와서 중간에 중단할 수 없음
